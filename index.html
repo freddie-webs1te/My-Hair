@@ -1745,11 +1745,11 @@
       </div>
       <div class="checkout-meta">
         <div class="checkout-meta-row">
-          <span>Creator fee (5%)</span>
+          <span>Creator fee (7%)</span>
           <strong id="checkoutFee">R0</strong>
         </div>
         <div class="checkout-meta-row">
-          <span>Client payout (95%)</span>
+          <span>Client payout (93%)</span>
           <strong id="checkoutPayout">R0</strong>
         </div>
       </div>
@@ -2030,7 +2030,7 @@
       let timer;
 
       function calculateCommission(amount) {
-        const fee = Number((amount * 0.05).toFixed(2));
+        const fee = Number((amount * 0.07).toFixed(2));
         return {
           fee,
           payout: Number((amount - fee).toFixed(2))
@@ -2095,7 +2095,7 @@
         const { fee, payout } = calculateCommission(total);
         const subject = encodeURIComponent('New order from MY Hair');
         const body = encodeURIComponent(
-          `Buyer email: ${email || 'not provided'}\n\nOrder details:\n${items || 'No items selected'}\n\nCustomer total: R${total.toLocaleString()}\nCreator fee (5%): R${fee.toLocaleString()}\nClient payout (95%): R${payout.toLocaleString()}`
+          `Buyer email: ${email || 'not provided'}\n\nOrder details:\n${items || 'No items selected'}\n\nCustomer total: R${total.toLocaleString()}\nCreator fee (7%): R${fee.toLocaleString()}\nClient payout (93%): R${payout.toLocaleString()}`
         );
         return `mailto:08myhair@gmail.com?subject=${subject}&body=${body}`;
       }
