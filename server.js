@@ -115,8 +115,8 @@ app.post('/api/order-email', async (req, res) => {
       <p><strong>Product code:</strong> ${productCode}</p>
       <p><strong>Order:</strong><br>${getProductList(items)}</p>
       <p><strong>Total paid:</strong> ${formatMoney(total)}</p>
-      <p><strong>Creator fee (7%):</strong> ${formatMoney(fee)}</p>
-      <p><strong>Client payout (93%):</strong> ${formatMoney(payout)}</p>
+      <p><strong>Creator fee (5%):</strong> ${formatMoney(fee)}</p>
+      <p><strong>Client payout (95%):</strong> ${formatMoney(payout)}</p>
       <p>We will be in touch shortly with the next steps.</p>
     `;
 
@@ -135,8 +135,8 @@ app.post('/api/order-email', async (req, res) => {
         <p><strong>Product code:</strong> ${productCode}</p>
         <p><strong>Items:</strong><br>${getProductList(items)}</p>
         <p><strong>Total:</strong> ${formatMoney(total)}</p>
-        <p><strong>Creator fee (7%):</strong> ${formatMoney(fee)}</p>
-        <p><strong>Client payout (93%):</strong> ${formatMoney(payout)}</p>
+        <p><strong>Creator fee (5%):</strong> ${formatMoney(fee)}</p>
+        <p><strong>Client payout (95%):</strong> ${formatMoney(payout)}</p>
       `
     });
 
@@ -202,8 +202,8 @@ app.post('/api/paypal-webhook', async (req, res) => {
           <p><strong>Product code:</strong> ${productCode}</p>
           <p><strong>Items:</strong><br>${getProductList(items)}</p>
           <p><strong>Total paid:</strong> ${formatMoney(total)}</p>
-          <p><strong>Creator fee (7%):</strong> ${formatMoney(fee)}</p>
-          <p><strong>Client payout (93%):</strong> ${formatMoney(payout)}</p>
+          <p><strong>Creator fee (5%):</strong> ${formatMoney(fee)}</p>
+          <p><strong>Client payout (95%):</strong> ${formatMoney(payout)}</p>
         `
       });
 
