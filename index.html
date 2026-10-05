@@ -332,6 +332,17 @@
       height: 100%;
     }
 
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.92;
+      filter: saturate(0.8) contrast(1.1) brightness(0.82);
+      background: #0a0a0a;
+    }
+
     .hero-badge {
       position: absolute;
       left: 0;
@@ -1475,7 +1486,9 @@
     </div>
 
     <div class="hero-visual">
-      <div class="stage" data-seed="3" data-count="58" data-length="1.05" data-wave="1.15" data-stroke="1.5"></div>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="6923062-hd_1080_1920_30fps.mp4" type="video/mp4">
+      </video>
       <div class="hero-badge">
         <span><strong>New</strong> — The Signature Collection</span>
         <span>Free shipping nationwide</span>
